@@ -46,15 +46,17 @@ public class ProgramaPrincipal {
 		usuario2.put("Segundo-Apellido","Rios");
 		usuario2.put("Email", "moncasrio@gmail.com");
 		
-		Set dame = usuario1.keySet();
-		Iterator <String> it = dame.iterator();
-		String key;
-		String tmp;
-		while (it.hasNext()) {
-			key = it.next();
-			tmp = usuario1.get(key);
-			System.out.println(key+": "+tmp);
+
+		//Para sacar por pantalla utilizo un for-each
+
+		for(String key1:usuario1.keySet()) {
+			System.out.println(key1+": "+usuario1.get(key1));
 		}
+		System.out.println("=======================================");
+		for(String key1:usuario2.keySet()) {
+			System.out.println(key1+": "+usuario2.get(key1));
+		}
+		
 	}
 
 }

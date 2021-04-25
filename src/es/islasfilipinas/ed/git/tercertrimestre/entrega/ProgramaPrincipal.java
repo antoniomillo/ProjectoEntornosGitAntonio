@@ -1,9 +1,8 @@
 package es.islasfilipinas.ed.git.tercertrimestre.entrega;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
+import java.util.TreeMap;
 
 /**
  * Voy a crear una estructura de pares de clave valor.
@@ -28,7 +27,7 @@ public class ProgramaPrincipal {
 
 		//Creo la misma estructura HashMap para cada 
 		//nueva entrada de datos de otro usuario
-		Map<String, String> usuario1 = new HashMap<>();
+		HashMap usuario1 = new HashMap<>();
 		usuario1.put("Id", "001");
 		usuario1.put("Nombre Usuario", "usuario1");
 		usuario1.put("Contraseña","xxxxxxxxxxxxxxxxxx");
@@ -37,7 +36,7 @@ public class ProgramaPrincipal {
 		usuario1.put("Segundo-Apellido","Garcia");
 		usuario1.put("Email", "pepegonzogar@gmail.com");
 		
-		Map<String, String> usuario2 = new HashMap<>();
+		HashMap usuario2 = new HashMap<>();
 		usuario2.put("Id", "002");
 		usuario2.put("Nombre Usuario", "usuario2");
 		usuario2.put("Contraseña","xxxxxxxxxxxxxxxxxx");
@@ -47,14 +46,14 @@ public class ProgramaPrincipal {
 		usuario2.put("Email", "moncasrio@gmail.com");
 		
 
+		//Creo otra estructura que almacena las estructuras anteiores
+		Map<Integer, HashMap> datosUsuario = new TreeMap<>();
+		datosUsuario.put(0, usuario1);
+		datosUsuario.put(1, usuario2);
+		
 		//Para sacar por pantalla utilizo un for-each
-
-		for(String key1:usuario1.keySet()) {
-			System.out.println(key1+": "+usuario1.get(key1));
-		}
-		System.out.println("=======================================");
-		for(String key1:usuario2.keySet()) {
-			System.out.println(key1+": "+usuario2.get(key1));
+		for (HashMap key1: datosUsuario.values()) {
+			System.out.println(key1);
 		}
 		
 	}

@@ -1,2 +1,2 @@
-# ProjectoEntornosGitAntonio
-Projecto que muestra el uso de git
+# ProyectoEntornosGitAntonio
+Proyecto que muestra el uso de git
